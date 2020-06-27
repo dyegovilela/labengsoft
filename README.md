@@ -13,5 +13,5 @@ Após intslado e configurado os itens acima, seguir para o passo 2.
 
 _código acima instala as dependencias_
 
-* Para rodar a aplicação:
+Para rodar a aplicação:
 * npm start
