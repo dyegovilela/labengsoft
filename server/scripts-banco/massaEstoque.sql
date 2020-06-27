@@ -32,6 +32,10 @@ insert into notafiscal value
 insert into notafiscal value 
 (1235080, '2020-05-02', '2020-05-20', 01);
 
+insert into notafiscal value 
+(1235070, '2020-05-03', '2020-05-03', 01);
+
+
 
 
 
