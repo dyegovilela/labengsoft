@@ -22,11 +22,15 @@ insert  into fornecedor values ('02',
 'Kátia', 11988541142);
 
 insert into notafiscal value 
-(123568, '2018-12-02', '2018-12-02', 01);
+(123568, '2020-05-02', '2020-05-02', 01);
 
 insert into notafiscal value 
-(1235079, '2018-12-02', '2018-12-02', 01);
+(1235079, '2020-05-02', '2020-05-02', 01);
 
+
+
+insert into notafiscal value 
+(1235080, '2020-05-02', '2020-05-20', 01);
 
 
 
