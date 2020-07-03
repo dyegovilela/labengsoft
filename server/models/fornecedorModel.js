@@ -20,7 +20,7 @@ module.exports.insereNovoFornecedor = (formfornecedor, req, res, next)=>{
 module.exports.listaFornecedores = (req, res, next) =>{
   var connection = db();
 
-  connection.query("select cd_fornecedor, nm_fantasia, nm_vendedor, cd_telvendedor from fornecedor",  function(err, result) {
+  connection.query("select cd_fornecedor, nm_fantasia, nm_vendedor, cel_telvendedor from fornecedor",  function(err, result) {
 
     if(err){throw err};
       res.render('listafornecedores', {fornecedores: result});
