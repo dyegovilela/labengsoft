@@ -4,7 +4,7 @@ module.exports = function(){
     return connection = mysql.createConnection({
         host : 'localhost', 
         user: 'root',
-        password: '@loha123', //inserir a senha da SUA INSTALAÇÃO DO MYSQL
+        password: '@1234', //inserir a senha da SUA INSTALAÇÃO DO MYSQL
         database: 'estoque' 
     });
 
