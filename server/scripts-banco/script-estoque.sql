@@ -44,6 +44,8 @@ CREATE TABLE IF NOT EXISTS `estoque`.`produto` (
 ENGINE = InnoDB;
 
 
+
+
 -- -----------------------------------------------------
 -- Table `estoque`.`fornecedor`
 -- -----------------------------------------------------
