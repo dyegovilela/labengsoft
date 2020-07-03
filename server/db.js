@@ -8,6 +8,9 @@ module.exports = function(){
         database: 'estoque' 
     });
 
+
+
+    
     connection.connect(function(err) {
         if (err) {
           console.error('Erro de conexão ' + err.stack);
