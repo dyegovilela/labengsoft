@@ -15,6 +15,10 @@ let cipher = crypto.createCipher(criptografia.algoritmo, criptografia.segredo);
 
 //cipher.update(senha);
 
+console.log("===================================")
+console.log("Servidor iniciado em localhost:3000")
+console.log("=================================== \n")
+
 
 module.exports.get = (req, res, next) => {
     res.render('index');

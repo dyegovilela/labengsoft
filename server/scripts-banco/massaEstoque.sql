@@ -1,7 +1,7 @@
 use estoque;
 -- (id, user, senha, )
 insert into usuario value (4002, 'Mari Santos', 123, 'maary.santos1@gmail.com');
-insert into usuario value (4003, 'Dyego','dyego', 123, 'dyego@io');
+insert into usuario value (4003, 'Dyego', 123, 'dyego@io');
 
 
 insert into tipo_despesa value (01, 'loja');
