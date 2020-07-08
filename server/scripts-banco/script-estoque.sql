@@ -4,7 +4,7 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'COLOQUE AQUI SUA SENHA DO SQL'; <<<<<<<<<<<<<<<< COLOQUE AQUI SUA SENHA DO SQL
+-- ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'COLOQUE AQUI SUA SENHA DO SQL'; <<<<<<<<<<<<<<<< COLOQUE AQUI SUA SENHA DO SQL
 
 -- -----------------------------------------------------
 -- Schema estoque
@@ -13,7 +13,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'COLOQUE 
 -- -----------------------------------------------------
 -- Schema estoque
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `estoque` DEFAULT CHARACTER SET utf8 ;
+-- CREATE SCHEMA IF NOT EXISTS `estoque` DEFAULT CHARACTER SET utf8 ;
 USE `estoque` ;
 
 -- -----------------------------------------------------
@@ -137,6 +137,50 @@ CREATE TABLE IF NOT EXISTS `estoque`.`despesa` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `estoque`.`estoque`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `estoque`.`estoque` (
+  `cd_estoque` INT NOT NULL AUTO_INCREMENT,
+  `estoque_cd`_produto VARCHAR(10),
+  `ds_produto` VARCHAR(30),
+  `qt_produto` INT,
+  PRIMARY KEY (cd_estoque),
+
+  CONSTRAINT `fk_estoque_produto`
+    FOREIGN KEY (`estoque_cd_produto`)
+    REFERENCES `estoque`.`produto` (`cd_produto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+GO
+
+-- -----------------------------------------------------
+-- Table `estoque`.`saida_produto`
+-- -----------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS `estoque`.`saida_produto` (
+  `cd_saida_produto` INT NOT NULL AUTO_INCREMENT,
+  `estoque_cd_produto` VARCHAR(10),
+  `ds_produto` VARCHAR(30),
+  `qt_produto` INT,
+
+  PRIMARY KEY (`cd_saida_produto`),
+
+  CONSTRAINT `fk_saida_produto_produto`
+    FOREIGN KEY (`estoque_cd_produto`)
+    REFERENCES `estoque`.`produto` (`cd_produto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+GO
+
+ALTER TABLE estoque.produto ADD `qt_produto` INT
+
+
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
