@@ -4,7 +4,7 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'COLOQUE AQUI SUA SENHA DO SQL'; <<<<<<<<<<<<<<<< COLOQUE AQUI SUA SENHA DO SQL
+-- ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'COLOQUE AQUI SUA SENHA DO SQL'; <<<<<<<<<<<<<<<< COLOQUE AQUI SUA SENHA DO SQL
 
 -- -----------------------------------------------------
 -- Schema estoque
@@ -13,7 +13,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'COLOQUE 
 -- -----------------------------------------------------
 -- Schema estoque
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `estoque` DEFAULT CHARACTER SET utf8 ;
+-- CREATE SCHEMA IF NOT EXISTS `estoque` DEFAULT CHARACTER SET utf8 ;
 USE `estoque` ;
 
 -- -----------------------------------------------------
