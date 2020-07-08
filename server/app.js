@@ -13,7 +13,6 @@ const Fornecedor = require('./routes/fornecedor');
 const Relatorios= require('./routes/relatorios');
 const Despesa = require('./routes/despesa');
 
-
 var app = express();
 
 // view engine setup
