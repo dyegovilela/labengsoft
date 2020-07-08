@@ -198,4 +198,6 @@ a.lnkGeral:active {
     margin-top: 4px;
 }
 
-#btnSair:hover{background:  #eeda22; border-radius:3px;}
+#btnSair:hover{
+	color: rgb(253, 25, 25);
+}
