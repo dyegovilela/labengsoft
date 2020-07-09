@@ -71,7 +71,7 @@ a.lnkBranco {
 a.lnkBranco:hover {
 	text-decoration: none;
 	color: #fff;
-	background-color: #C82C64;
+	background-color: #eeda22;
 }
 
 a.lnkBranco:visited {
@@ -174,9 +174,11 @@ a.lnkGeral:active {
 }
 
 #conteudoId {
-	margin-top: 10px;
+	/* margin-top: 10px; */
 	padding: 10px;
-	text-align: right;
+	/* text-align: right; */
+	/* display:inline; */
+	float: right;
 }
 
 #btnSair{
@@ -186,4 +188,16 @@ a.lnkGeral:active {
 	cursor:pointer;
 }
 
-#btnSair:hover{background:  #C82C64; border-radius:3px;}
+.logo {
+	display:inline;
+}
+
+.logo img{
+	height: 45px;
+    margin-left: 21px;
+    margin-top: 4px;
+}
+
+#btnSair:hover{
+	color: rgb(253, 25, 25);
+}
