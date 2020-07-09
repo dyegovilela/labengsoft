@@ -1,7 +1,7 @@
 use estoque;
 -- (id, user, senha, )
 insert into usuario value (4003, 'Dyego', 123, 'dyego@io');
-insert into usuario value (4004, 'admin', admin, 'dyego@io');
+insert into usuario value (4004, 'admin', 123, 'dyego@io');
 
 insert into tipo_despesa value (01, 'loja');
 insert into tipo_despesa value (02, 'pessoal');
@@ -10,21 +10,21 @@ insert  into fornecedor values ('01',
 'KALUGA LTDA', 'KALUGA LTDA',
 14258369000185, 1234567, 11461090, 'av sao joao', 11,
 'Pinheiros', 'São Paulo', 'sp', 1133412942, 
-1333523055, 'Maria', ,
+1333523055, 'Maria','' ,
 'Kátia', 11988541142);
 
 insert  into fornecedor values ('02',
 'Gianina LTDA', 'Gianina LTDA',
 12345678912311, 1234567, 11461090, 'av sao joao', 11,
 'pae-cara', 'guarujá', 'sp', 1130856260, 
-1333523055, 'maa', ,
+1333523055, 'maa', '',
 'Kátia', 1198833332);
 
 insert  into fornecedor values ('03',
 'GIMBA SA', 'GIMBA SA',
 80085119000143, 986532741, 11461090, 'av sao joao', 11,
 'Jd. Atibaia', 'ATIBAIA', 'sp', 1233412942, 
-1333523055, 'maa', 'www',
+1333523055, 'maa', '',
 'Kátia', 1196651142);
 
 insert  into fornecedor values ('04',
@@ -35,7 +35,7 @@ insert  into fornecedor values ('04',
 'Kátia', 119366598);
 
 
-insert  into fornecedor values ('02',
+insert  into fornecedor values ('05',
 'Gianina LTDA', 'Gianina LTDA',
 123456789123, 1234567, 11461090, 'av sao joao', 11,
 'pae-cara', 'guarujá', 'sp', 1333412942, 

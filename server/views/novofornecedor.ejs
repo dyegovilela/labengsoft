@@ -95,13 +95,13 @@
 
     <div class="form-row">
       <div class="form-group md-col-2">
-        <label for="nm_vendedor">Telefone 1</label>
-        <input id="nm_vendedor" name="nm_vendedor" class="form-control telefone"/>
+        <label for="cd_tel1">Telefone 1</label>
+        <input id="cd_tel1" name="cd_tel1" class="form-control telefone"/>
       </div>
 
       <div class="form-group md-col-2">
-        <label for="cd_telvendedor">Telefone 2</label>
-        <input id="cd_telvendedor" name="cd_telvendedor" class="form-control telefone" type="" />
+        <label for="cd_tel2">Telefone 2</label>
+        <input id="cd_tel2" name="cd_tel2" class="form-control telefone" type="" />
       </div>
 
       <div class="form-group md-col-3">
@@ -122,8 +122,8 @@
       </div>
     
       <div class="form-group md-col-2">
-        <label for="cd_telvendedor">Celular</label>
-        <input id="cd_telvendedor" name="cd_telvendedor" class="form-control celular" />
+        <label for="cel_telvendedor">Celular</label>
+        <input id="cel_telvendedor" name="cel_telvendedor" class="form-control celular" />
       </div>
     </div>
 
@@ -161,7 +161,7 @@ $(document).ready(function(){
   $('.telefone').mask('(00) 0000-0000');
   $('.cpf').mask('000.000.000-00', {reverse: true});
   $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
-  $('.ie').mask('000.000.000/0000-00', {reverse: true});/*arrumar função unmask() para remover as máscaras de edição*/
+  $('.ie').mask('000.000.000', {reverse: true});/*arrumar função unmask() para remover as máscaras de edição*/
 
 var maskBehavior = function (val) {
   return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';

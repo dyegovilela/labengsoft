@@ -13,7 +13,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema estoque
 -- -----------------------------------------------------
--- CREATE SCHEMA IF NOT EXISTS `estoque` DEFAULT CHARACTER SET utf8 ;
+--CREATE SCHEMA IF NOT EXISTS `estoque` DEFAULT CHARACTER SET utf8 ;
 USE `estoque` ;
 
 -- -----------------------------------------------------
@@ -50,7 +50,7 @@ ENGINE = InnoDB;
 -- Table `estoque`.`fornecedor`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `estoque`.`fornecedor` (
-  `cd_fornecedor` INT NOT NULL,
+  `cd_fornecedor` INT NOT NULL AUTO_INCREMENT,
   `nm_razao` VARCHAR(255) NOT NULL,
   `nm_fantasia` VARCHAR(255) NOT NULL,
   `cd_cnpj` VARCHAR(18) NOT NULL,
@@ -143,7 +143,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `estoque`.`estoque` (
   `cd_estoque` INT NOT NULL AUTO_INCREMENT,
-  `estoque_cd`_produto VARCHAR(10),
+  `estoque_cd_produto` VARCHAR(10),
   `ds_produto` VARCHAR(30),
   `qt_produto` INT,
   PRIMARY KEY (cd_estoque),
@@ -154,8 +154,6 @@ CREATE TABLE IF NOT EXISTS `estoque`.`estoque` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
-GO
 
 -- -----------------------------------------------------
 -- Table `estoque`.`saida_produto`
@@ -176,9 +174,7 @@ CREATE TABLE IF NOT EXISTS `estoque`.`saida_produto` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-GO
-
-ALTER TABLE estoque.produto ADD `qt_produto` INT
+ALTER TABLE estoque.produto ADD `qt_produto` INT;
 
 
 
