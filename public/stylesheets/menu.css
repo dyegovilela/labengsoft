@@ -7,7 +7,7 @@
 	left: 0;
 	width: 160px;
 	z-index: 1;
-	background-color:#444444 ;
+	background-color:#000000 ;
 	/*#363c4a;*/
 	height: 100%;
     font-size:12px
@@ -70,7 +70,7 @@ a.lnkBranco {
 
 a.lnkBranco:hover {
 	text-decoration: none;
-	color: #fff;
+	color: #000;
 	background-color: #eeda22;
 }
 
@@ -91,7 +91,7 @@ a.lnkBrancoSimples {
 
 a.lnkBrancoSimples:hover {
 	text-decoration: underline;
-	color: #fff;
+	color: #000;
 }
 
 a.lnkBrancoSimples:visited {
@@ -167,7 +167,7 @@ a.lnkGeral:active {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color:#444444;
+	background-color:#000;
 	color: #fff;
 	z-index: 2;
 	min-height: 57px;
@@ -182,7 +182,7 @@ a.lnkGeral:active {
 }
 
 #btnSair{
-	background-color:#444444; 
+	background-color:#000; 
 	border:none; 
 	color:#fff; 
 	cursor:pointer;
