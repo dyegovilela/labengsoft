@@ -33,12 +33,12 @@
     <div class="form-row">
       <div class="form-group  md-col-5">
         <label for="nm_razao">Nome/Razão Social</label>
-        <input id="nm_razao" class="form-control" name="nm_razao" />
+        <input id="nm_razao" class="form-control red-border" required name="nm_razao" />
       </div>
       
       <div class="form-group  md-col-5">
         <label for="nm_fantasia">Nome Fantasia</label>
-        <input id="nm_fantasia" class="form-control" name="nm_fantasia" />
+        <input id="nm_fantasia" class="form-control red-border" required name="nm_fantasia" />
       </div>
     </div>
   
@@ -46,12 +46,12 @@
     <div class="form-row">
       <div class="form-group md-col-3">
         <label for="cd_cnpj">CNPJ</label>
-        <input id="cd_cnpj" name="cd_cnpj" class="form-control cnpj"   />
+        <input id="cd_cnpj" name="cd_cnpj" class="form-control cnpj red-border" placeholder="" required  />
       </div>
 
       <div class="form-group md-col-3">
         <label for="cd_ie">Inscrição Estadual</label>
-        <input id="cd_ie" name="cd_ie"  class="form-control ie"/> 
+        <input id="cd_ie" name="cd_ie"  class="form-control ie red-border" required/> 
       </div>
     </div>
 
@@ -96,7 +96,7 @@
     <div class="form-row">
       <div class="form-group md-col-2">
         <label for="cd_tel1">Telefone 1</label>
-        <input id="cd_tel1" name="cd_tel1" class="form-control telefone"/>
+        <input id="cd_tel1" name="cd_tel1" class="form-control telefone red-border" required/>
       </div>
 
       <div class="form-group md-col-2">
@@ -106,7 +106,7 @@
 
       <div class="form-group md-col-3">
         <label for="nm_email">Email</label>
-        <input id="nm_email" name="nm_email" class="form-control" type="email" />
+        <input id="nm_email" name="nm_email" class="form-control red-border" required type="email" />
       </div>
 
       <div class="form-group md-col-3">
@@ -154,7 +154,17 @@
 </body>
 <script>
 
-  
+$(function(){
+    $('input:required,textarea:required').on('blur', function(){
+      if($(this).val()!==''){  //assuming the form doesn't have some fields populated by default.
+          $(this).addClass('green-border');
+          $(this).removeClass('red-border');
+      } else {
+          $(this).addClass('red-border');
+          $(this).removeClass('green-border');
+      }
+    });
+});
 
 $(document).ready(function(){
   $('.cep').mask('00000-000');

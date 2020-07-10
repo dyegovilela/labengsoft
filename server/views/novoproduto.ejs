@@ -40,15 +40,15 @@
             <div class="form-row">
                <div class="form-group  md-col-2" >
                   <label for="cd_produto">Código</label>
-                  <input id="cd_produto" name="cd_produto" class="form-control" type="text"   placeholder="" />
+                  <input id="cd_produto" name="cd_produto" class="form-control red-border type="text" placeholder="" required>
                </div>
                <div class="form-group  md-col-2" >
                   <label for="cd_ncm">NCM</label>
-                  <input id="cd_ncm" name="cd_ncm" class="form-control" type="text"   />
+                  <input id="cd_ncm" name="cd_ncm" class="form-control red-border" type="text" required>
                </div>
                <div class="form-group  md-col-6">
                   <label for="ds_produto">Nome Produto</label>
-                  <input id="ds_produto" class="form-control" name="ds_produto" placeholder="Nome do Produto" />
+                  <input id="ds_produto" class="form-control red-border" name="ds_produto" placeholder="Nome do Produto" required>
                </div>
             </div>
             <div class="form-row">
@@ -64,15 +64,15 @@
                </div>
                <div class="form-group md-col-2">
                   <label for="qt_estoque">Quantidade</label>
-                  <input id="qt_estoque" name="qt_estoque" type="number" class="form-control" placeholder="0,00"  style="width:100%"/> 
+                  <input id="qt_estoque" name="qt_estoque" type="number" class="form-control red-border" required placeholder="0,00"  style="width:100%"/> 
                </div>
                <div class="form-group md-col-2">
                   <label for="vl_unitario">Valor Unitário</label>
-                  <input id="vl_unitario"  name="vl_unitario" type="" class="form-control mask" placeholder="R$" />
+                  <input id="vl_unitario"  name="vl_unitario" type="" class="form-control mask red-border" required placeholder="R$" />
                </div>
                <div class="form-group md-col-2">
                   <label for="vl_total">Valor Total</label>
-                  <input id="vl_total"  name="vl_total" class="form-control mask" placeholder="R$" type="" />
+                  <input id="vl_total"  name="vl_total" class="form-control mask red-border" required placeholder="R$" type="" />
                </div>
             </div>
             <h5>Dados da Nota Fisca do Produto </h5>
@@ -81,7 +81,7 @@
             <div class="form-row">
                <div class="form-group md-col-3">
                   <label for="nm_fantasia">Selecione o fornecedor:</label>
-                  <select id="nm_fantasia" name="nm_fantasia" class="form-control">
+                  <select id="nm_fantasia" name="nm_fantasia" class="form-control" >
                      <option selected>-</option>
                      <% for (var i=0; i< dadosFor.length; i++){ %>
                      <option value="<%=dadosFor[i].cd_fornecedor %>"> <%= dadosFor[i].nm_fantasia %></option>
@@ -96,7 +96,7 @@
                </div>
             </div>
 
-
+            <!-- <button type="submit" id="btnGravar"> Salvar</button> -->
             <button type="button" id="btnGravar" data-toggle="modal" data-target="#mymodal"> Inserir</button>
             <input id="btnCancelar" type="reset"/>
             <div id="mymodal" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -113,7 +113,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary" onclick="document.querySelector('#form').submit()">Salvar</button>
+                    <button type="submit" class="btn btn-primary" onclick="document.querySelector('#form').submit()">Salvar</button>
                   </div>
                 </div>
               </div>
@@ -123,6 +123,17 @@
   </body>
 
    <script>
+      $(function(){
+         $('input:required,textarea:required').on('blur', function(){
+            if($(this).val()!==''){  //assuming the form doesn't have some fields populated by default.
+               $(this).addClass('green-border');
+               $(this).removeClass('red-border');
+            } else {
+               $(this).addClass('red-border');
+               $(this).removeClass('green-border');
+            }
+         });
+      });
 
       $(function() {
         $('.mask').maskMoney({

@@ -53,9 +53,9 @@
       </div>
 
      <div class="form-row">
-        <div class="form-group md-col-2">
-          <label for="tipo_embalagem_nm_tipo_embalagem">Tipo Embalagem</label>
-          <input id="tipo_embalagem_nm_tipo_embalagem" class="form-control" name="tipo_embalagem_nm_tipo_embalagem" />
+        <div class="form-group  md-col-2">
+          <label for="nm_embalagem">Tipo Embalagem </label>
+          <input id="nm_embalagem" class="form-control" name="nm_embalagem" />
         </div>
     </div>
 
@@ -124,7 +124,7 @@
                     var quantidade = document.getElementById('qt_produto');
                     var valor = document.getElementById('vl_unitario');
                     var vltotal = document.getElementById('vl_total');
-                    var embalagem = document.getElementById('tipo_embalagem_nm_tipo_embalagem');
+                    var embalagem = document.getElementById('nm_embalagem');
 
                     
                     codigo.value=datum.cd_produto;
@@ -133,7 +133,7 @@
                     quantidade.value=datum.qt_produto;
                     valor.value =datum.vl_unitario;
                     vltotal = datum.vl_total;
-                    embalagem.value=datum.tipo_embalagem_nm_tipo_embalagem;
+                    embalagem.value=datum.nm_embalagem;
                 });   
 
         $(".lstSubMenu1").hide();

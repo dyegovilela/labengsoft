@@ -151,3 +151,21 @@ legend {
 #contador {
 	font-weight: bold
 }
+
+.green-border {
+	border: 1.5px solid green !important;  
+  }
+
+.red-border {
+	border: 1.5px solid red !important;  
+  }
+  
+  /* input:required:focus {
+	border: 1px solid red;
+	outline: none;
+  }
+  
+  textarea:required:focus {
+	border: 1px solid red;
+	outline: none;
+  } */
