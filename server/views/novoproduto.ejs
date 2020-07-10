@@ -97,8 +97,8 @@
             </div>
 
             <!-- <button type="submit" id="btnGravar"> Salvar</button> -->
-            <button type="button" id="btnGravar" data-toggle="modal" data-target="#mymodal"> Inserir</button>
-            <input id="btnCancelar" type="reset"/>
+            <button type="button" id="btnGravar" data-toggle="modal" data-target="#mymodal"class="btn btn-primary"> Inserir</button>
+            <button type="button" id="btnCancelar" class="btn btn-danger" type="reset">Limpar</button>
             <div id="mymodal" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -112,7 +112,7 @@
                   Deseja salvar os dados?
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
                     <button type="submit" class="btn btn-primary" onclick="document.querySelector('#form').submit()">Salvar</button>
                   </div>
                 </div>

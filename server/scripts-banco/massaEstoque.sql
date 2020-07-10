@@ -6,6 +6,30 @@ insert into usuario value (4004, 'admin', 123, 'dyego@io');
 insert into tipo_despesa value (01, 'loja');
 insert into tipo_despesa value (02, 'pessoal');
 
+insert into despesa value ( 1,'Pagamento material', '2022-05-07', '2022-05-04', 250, 1);
+insert into despesa value ( 2,'Pagamento material', '2022-05-07', '2022-05-04', 1556, 1);
+insert into despesa value ( 3,'Pagamento Funcionario', '2022-05-07', '2022-05-04', 4000, 1);
+insert into despesa value ( 4,'Pagamento Kalunga', '2022-05-07', '2022-05-04', 899.98, 1);
+insert into despesa value ( 5,'Combustivel', '2022-05-07', '2022-05-04', 350, 1);
+
+insert into despesa value (,'Pagamento material', '2022-05-07', '2022-05-04', 150, 1)
+
+CREATE TABLE IF NOT EXISTS `estoque`.`despesa` (
+  `cd_despesa` INT NOT NULL AUTO_INCREMENT,
+  `ds_despesa` VARCHAR(255) NOT NULL,
+  `dt_pagamento` DATE NOT NULL,
+  `dt_compra` DATE NOT NULL,
+  `vl_despesa` DECIMAL(5,2) NOT NULL,
+  `tipo_despesa_cd_despesa` INT NOT NULL,
+  PRIMARY KEY (`cd_despesa`),
+  INDEX `fk_despesa_tipo_despesa2_idx` (`tipo_despesa_cd_despesa` ASC),
+  CONSTRAINT `fk_despesa_tipo_despesa2`
+    FOREIGN KEY (`tipo_despesa_cd_despesa`)
+    REFERENCES `estoque`.`tipo_despesa` (`cd_despesa`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+
+
 insert  into fornecedor values ('01',
 'KALUGA LTDA', 'KALUGA LTDA',
 14258369000185, 1234567, 11461090, 'av sao joao', 11,
