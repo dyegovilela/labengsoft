@@ -174,6 +174,26 @@ CREATE TABLE IF NOT EXISTS `estoque`.`saida_produto` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `estoque`.`despesa`
+-- -----------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS `estoque`.`despesa` (
+  `cd_despesa` INT NOT NULL AUTO_INCREMENT,
+  `ds_despesa` VARCHAR(255) NOT NULL,
+  `dt_pagamento` DATE NOT NULL,
+  `dt_compra` DATE NOT NULL,
+  `vl_despesa` DECIMAL(5,2) NOT NULL,
+  `tipo_despesa_cd_despesa` INT NOT NULL,
+  PRIMARY KEY (`cd_despesa`),
+  INDEX `fk_despesa_tipo_despesa2_idx` (`tipo_despesa_cd_despesa` ASC),
+  CONSTRAINT `fk_despesa_tipo_despesa2`
+    FOREIGN KEY (`tipo_despesa_cd_despesa`)
+    REFERENCES `estoque`.`tipo_despesa` (`cd_despesa`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
 ALTER TABLE estoque.produto ADD `qt_produto` INT;
 
 

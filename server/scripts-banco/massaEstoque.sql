@@ -12,25 +12,9 @@ insert into despesa value ( 3,'Pagamento Funcionario', '2022-05-07', '2022-05-04
 insert into despesa value ( 4,'Pagamento Kalunga', '2022-05-07', '2022-05-04', 899.98, 1);
 insert into despesa value ( 5,'Combustivel', '2022-05-07', '2022-05-04', 350, 1);
 
-insert into despesa value (,'Pagamento material', '2022-05-07', '2022-05-04', 150, 1)
+insert into despesa value (6,'Pagamento material', '2022-05-07', '2022-05-04', 150, 1);
 
-CREATE TABLE IF NOT EXISTS `estoque`.`despesa` (
-  `cd_despesa` INT NOT NULL AUTO_INCREMENT,
-  `ds_despesa` VARCHAR(255) NOT NULL,
-  `dt_pagamento` DATE NOT NULL,
-  `dt_compra` DATE NOT NULL,
-  `vl_despesa` DECIMAL(5,2) NOT NULL,
-  `tipo_despesa_cd_despesa` INT NOT NULL,
-  PRIMARY KEY (`cd_despesa`),
-  INDEX `fk_despesa_tipo_despesa2_idx` (`tipo_despesa_cd_despesa` ASC),
-  CONSTRAINT `fk_despesa_tipo_despesa2`
-    FOREIGN KEY (`tipo_despesa_cd_despesa`)
-    REFERENCES `estoque`.`tipo_despesa` (`cd_despesa`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-
-
-insert  into fornecedor values ('01',
+insert into fornecedor values ('01',
 'KALUGA LTDA', 'KALUGA LTDA',
 14258369000185, 1234567, 11461090, 'av sao joao', 11,
 'Pinheiros', 'São Paulo', 'sp', 1133412942, 
@@ -90,10 +74,10 @@ insert into notafiscal value
 (3216548, '2020-05-03', '2020-05-03', 04);
 
 insert into notafiscal value 
-(1235080, '2020-05-02', '2020-05-20', 04);
+(1235080, '2020-05-02', '2020-05-20', 05);
 
 insert into notafiscal value 
-(589, '2020-05-03', '2020-05-03', 07);
+(589, '2020-05-03', '2020-05-03', 06);
 
 
 insert into produto value 
@@ -103,13 +87,13 @@ insert into produto value
 insert into produto value 
 (3, 25010020, 'PAPEL COUCHE 120G','CA', 1 ,'2022-05-03',330.00, 330);
 insert into produto value 
-(4, 21132313, 'CANETA BIC AZUL','UN', 150 ,'2022-05-03',1, 150)0;
+(4, 21132313, 'CANETA BIC AZUL','UN', 150 ,'2022-05-03',1, 150);
 insert into produto value 
-(5, 21132313, 'CANETA BIC VERMELHA','UN', 150 ,'2022-05-03',1, 150)0;
+(5, 21132313, 'CANETA BIC VERMELHA','UN', 150 ,'2022-05-03',1, 150);
 insert into produto value 
-(6, 21132313, 'CANETA BIC PRETA','UN', 150 ,'2022-05-03',1, 150)0;
+(6, 21132313, 'CANETA BIC PRETA','UN', 150 ,'2022-05-03',1, 150);
 insert into produto value 
-(7, 21132313, 'CANETA BIC VERDE','UN', 150 ,'2022-05-03',1, 150)0;
+(7, 21132313, 'CANETA BIC VERDE','UN', 150 ,'2022-05-03',1, 150);
 insert into produto value 
 (8, 87987989, 'LAPIS HB2','CA', 1 ,'2022-05-03',17.00, 17);
 insert into produto value 
@@ -141,13 +125,13 @@ insert into produto value
 insert into produto value 
 (23, 25010020, 'PAPEL COUCHE 120G','CA', 1 ,'2022-05-03',330.00, 330);
 insert into produto value 
-(24, 21132313, 'CANETA BIC AZUL','UN', 150 ,'2022-05-03',1, 150)0;
+(24, 21132313, 'CANETA BIC AZUL','UN', 150 ,'2022-05-03',1, 150);
 insert into produto value 
-(25, 21132313, 'CANETA BIC VERMELHA','UN', 150 ,'2022-05-03',1, 150)0;
+(25, 21132313, 'CANETA BIC VERMELHA','UN', 150 ,'2022-05-03',1, 150);
 insert into produto value 
-(26, 21132313, 'CANETA BIC PRETA','UN', 150 ,'2022-05-03',1, 150)0;
+(26, 21132313, 'CANETA BIC PRETA','UN', 150 ,'2022-05-03',1, 150);
 insert into produto value 
-(27, 21132313, 'CANETA BIC VERDE','UN', 150 ,'2022-05-03',1, 150)0;
+(27, 21132313, 'CANETA BIC VERDE','UN', 150 ,'2022-05-03',1, 150);
 insert into produto value 
 (28, 87987989, 'LAPIS HB2','CA', 1 ,'2022-05-03',17.00, 17);
 insert into produto value 
